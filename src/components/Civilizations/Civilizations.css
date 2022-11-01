@@ -1,0 +1,43 @@
+/* .cardImgCiv{
+    width: '100px';
+    display: 'block';
+    margin: 'auto';
+    margin-top: "15px";
+} */
+
+.cardImgCiv {
+    width: 130px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 17px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardCiv {
+    width: 10rem;
+    height: 13rem;
+    margin: 7px;
+    background-image: url(./Images/card3.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.titleCiv {
+    font-family: 'Luminari, fantasy';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cardBodyCiv {
+    max-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}

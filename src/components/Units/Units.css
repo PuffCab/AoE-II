@@ -1,0 +1,36 @@
+.cardImgUnit {
+    width: 120px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 13px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cardUnit {
+    width: 9rem;
+    height: 13rem;
+    margin: 10px;
+    background-image: url(./Images/card5.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.titleUnit{
+    font-family: 'Luminari, fantasy';
+    font-size: 20px;
+    text-align: center;
+}
+
+.cardBodyUnit{
+    max-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
