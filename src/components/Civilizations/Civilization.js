@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Civilizations.css'
 
 function Civilization({ civilization }) {
 
   function importAll(r) {
     let images = {};
-    r.keys().map((item) => { images[item.replace('./', '')] = r(item); });
+    r.keys().forEach((item) => { images[item.replace('./', '')] = r(item); });
     return images;
   }
 
-  const images = importAll(require.context('./Images/Civilizations', false, /\.(png|jpe?g|svg)$/));
+  const images = importAll(require.context('../../Images/Civilizations', false, /\.(png|jpe?g|svg)$/));
   
 
 
@@ -20,23 +21,8 @@ function Civilization({ civilization }) {
         <div className="cardBodyCiv">
           <h1 className="titleCiv">{civilization.name}</h1>
         </div>
-        <a href="#" className='stretched-link'></a>
+        <Link to={`${civilization.id}`} className="stretched-link"></Link>
       </div>
-      
-
-
-      {/* <Card style={{ width: '9rem'}} className="card">
-        <Card.Img style={{
-          width: '100px',
-          display: 'block',
-          margin: 'auto',
-          marginTop: "15px"
-          }} className="card-img" src={images[`${civilization.name}.png`]} alt={civilization.name} />
-        <Card.Body>
-        <Card.Title style={{textAlign: 'center', fontFamily:'Luminari, fantasy'}}>{civilization.name}</Card.Title>
-        </Card.Body>
-        <Card.Link href="#" className='stretched-link'></Card.Link>
-      </Card> */}
     </>
   )
 }

@@ -1,0 +1,31 @@
+.logoImg{
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.NavBar{
+    background-image: url("../../Images/paper2.jpeg");
+    border-bottom: 2px;
+    border-bottom-style: solid;
+}
+
+.Brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div.dropdown-menu.show{
+    background-image: url("../../Images/paper3.jpeg");
+}
+
+.NavBarLinks{
+    margin-left: 4px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.DropDownLinks{
+    font-size: large;
+    font-weight: bold;
+}

@@ -1,15 +1,16 @@
 import React from 'react'
 import './Units.css'
+import { Link } from 'react-router-dom';
 
 function Unit({ unit }) {
 
   function importAll(r) {
     let images = {};
-    r.keys().map((item) => { images[item.replace('./', '')] = r(item); });
+    r.keys().forEach((item) => { images[item.replace('./', '')] = r(item); });
     return images;
   }
 
-  const images = importAll(require.context('./Images/Units', false, /\.(png|jpe?g|svg)$/));
+  const images = importAll(require.context('../../Images/Units', false, /\.(png|jpe?g|svg)$/));
 
   return (
     <>
@@ -18,7 +19,7 @@ function Unit({ unit }) {
         <div className="cardBodyUnit">
           <h1 className="titleUnit">{unit.name}</h1>
         </div>
-        <a href="#" className='stretched-link'></a>
+        <Link to={`${unit.id}`} className="stretched-link"></Link>
       </div>
     </>
   )
