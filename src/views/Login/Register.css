@@ -1,0 +1,28 @@
+.formDiv{
+    background-image: url(../../Images/Book/paper5.jpeg);
+    background-size: 100%;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+div.backgroundDiv{
+    background: #000000 url(../../Images/Screens/Wiki-background.jpg) no-repeat fixed center top;
+    background-size: 200%;
+}
+
+.formText{
+    font-weight: 700;
+}
+
+.formDiv > :first-child{
+    text-align: center;
+}
+
+.warningText{
+    color: red;
+    font-size: small;
+    font-weight: 600;
+}

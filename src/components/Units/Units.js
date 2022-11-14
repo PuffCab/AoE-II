@@ -1,10 +1,22 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import Unit from './Unit';
+import Loader from '../Loader/Loader';
+import Pagination from '../Pagination/Pagination';
 
-function Units() {
+function Units({ searchInput }) {
 
     const [units, setUnits] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    let filteredUnits = units
+
+    
+    if (searchInput.length > 0) {filteredUnits = 
+        units.filter((unit) => {
+            return unit.name.toLowerCase().includes(searchInput.toLowerCase());
+        });
+    }
 
 
     const fetchUnits = () => {
@@ -14,6 +26,7 @@ function Units() {
             .then((result) => {
                 console.log(result.units);
                 setUnits(result.units);
+                setLoading(false);
             })
             .catch((error) => {
                 console.log("error", error);
@@ -27,14 +40,19 @@ function Units() {
 
 
   return (
-    <>
-          <div className='flex-container'>
-              {units &&
-                  units.map((unit) => {
+      <>          
+          {!loading ? (
+              <div className='flex-container'>
+              {filteredUnits &&
+                  filteredUnits.map((unit) => {
                       return <Unit key={unit.id} unit={unit} />;
                   })}
-          </div>
-            
+              </div>
+            ) : (
+              <div className="loaderDiv">
+                <Loader />
+              </div>
+          )}
     </>
   )
 }

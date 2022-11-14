@@ -4,9 +4,17 @@
 }
 
 .NavBar{
-    background-image: url("../../Images/paper2.jpeg");
     border-bottom: 2px;
     border-bottom-style: solid;
+    background: radial-gradient(#cc0000, #800000);
+    border-radius: 0px 0px 3px 3px;
+}
+
+.Brand > h1{
+    font-weight: bold;
+    color: black;
+    font-size: larger;
+    text-shadow: 2px 2px #b38600;
 }
 
 .Brand{
@@ -16,7 +24,7 @@
 }
 
 div.dropdown-menu.show{
-    background-image: url("../../Images/paper3.jpeg");
+    background: radial-gradient(#cc0000, #800000);
 }
 
 .NavBarLinks{

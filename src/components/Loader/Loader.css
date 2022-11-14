@@ -1,0 +1,10 @@
+.loaderImg{
+    border-radius: 60px;
+    width: 120px;
+}
+
+.loaderDiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+}

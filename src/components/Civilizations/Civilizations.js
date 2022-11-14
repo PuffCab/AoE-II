@@ -1,11 +1,21 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Civilization from './Civilization';
+import Loader from '../Loader/Loader';
 
-function Civilizations() {
+function Civilizations({ searchInput }) {
 
     const [civilizations, setCivilizations] = useState([]);
+    const [loading, setLoading] = useState(true);
 
+    let filteredCivilizations = civilizations
+
+    
+    if (searchInput.length > 0) {filteredCivilizations = 
+        civilizations.filter((civilization) => {
+            return civilization.name.toLowerCase().includes(searchInput.toLowerCase());
+        });
+    }
 
     const fetchCivilizations = () => {
         const url = `https://cab-cors-anywhere.herokuapp.com/https://age-of-empires-2-api.herokuapp.com/api/v1/civilizations`;
@@ -14,6 +24,7 @@ function Civilizations() {
             .then((result) => {
                 console.log(result.civilizations);
                 setCivilizations(result.civilizations);
+                setLoading(false);
             })
             .catch((error) => {
                 console.log("error", error);
@@ -27,12 +38,18 @@ function Civilizations() {
 
     return (
         <>
-            <div className='flex-container'>
-                {civilizations &&
-                    civilizations.map((civilization) => {
+            {!loading ? (
+              <div className='flex-container'>
+                {filteredCivilizations &&
+                    filteredCivilizations.map((civilization) => {
                         return <Civilization key={civilization.id} civilization={civilization} />;
                     })}
-            </div>
+                </div>
+            ) : (
+              <div className="loaderDiv">
+                <Loader />
+              </div>
+          )}
         </>
   )
 }

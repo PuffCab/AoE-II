@@ -1,0 +1,22 @@
+.favouriteButtons{
+    border-radius: 5px;
+    background: radial-gradient(#ff0000, #800000);
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.favouriteTitle{
+    text-align: center;
+    font-weight: bold;
+    color: #ffcc00;
+    font-size: x-large;
+    text-shadow: 2px 2px black;
+}
+
+.favouriteButtonsClicked{
+    border-radius: 5px;
+    background: radial-gradient(#ff0000, #800000);
+    font-weight: bold;
+    color: #ffcc00;
+    text-decoration: underline;
+}

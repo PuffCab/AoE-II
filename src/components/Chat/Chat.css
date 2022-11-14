@@ -1,0 +1,59 @@
+.comments{
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #FFE4B5;
+
+}
+
+.ownComments{
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #FFE4B5;
+    text-align: end;
+
+}
+
+.author{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: small;
+    font-weight: bold;
+}
+
+.text{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: large;
+    font-weight: 400;
+}
+
+.date{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+.submit{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.submitInput{
+    width: 350px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.submitButton{
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: #FFE4B5;
+}

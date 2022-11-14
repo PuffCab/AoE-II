@@ -37,3 +37,64 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.detailedInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.classInfo{
+    font-size: small;
+    font-weight: bold;
+}
+
+.textInfo{
+    font-size: small;
+}
+
+.detailedDiv{
+    background-image: url(../../Images/Book/paper5.jpeg);
+    background-size: 100%;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.detailedImgCiv {
+    width: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0px;
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+
+.detailedTitle{
+    text-align: center;
+}
+
+.favouriteIconCiv {
+    width: 20px;
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.infoCiv{
+    width: 20px;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.hr3{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, black, transparent);
+}

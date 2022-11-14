@@ -36,3 +36,30 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.detailedInfoList {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.div1{
+    max-width: 250px;
+}
+
+.favouriteIconUnits {
+    width: 20px;
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.infoUnits {
+    width: 20px;
+    position: absolute;
+    left: 11px;
+    top: 12px;
+    background-color: rgba(0, 0, 0, 0);
+}
